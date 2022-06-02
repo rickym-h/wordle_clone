@@ -1,0 +1,17 @@
+
+.parent {
+    height: max-content;
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+.child {
+    background-color: #f3f3f3;
+    width: 750px;
+    height: 1200px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
