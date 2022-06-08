@@ -11,9 +11,11 @@
 }
 .child {
     background-color: #f3f3f3;
-    width: 750px;
+    width: 90%;
     height: 1200px;
     padding: 50px;
+
+    font-size: 25px;
 
     display: flex;
     align-items: center;

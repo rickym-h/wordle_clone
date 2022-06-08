@@ -42,7 +42,7 @@ function getOutputArray(input, word) {
     // 1 == correct
     // 2 == correct BUT wrong place
     console.assert(input.length === word.length);
-    input = input.toLowerCase();
+    input = input.toUpperCase();
 
     let output = [];
 
@@ -68,7 +68,7 @@ function getOutputArray(input, word) {
 // Get a random word which is n letters long.
 function getWordOfLengthN(n) {
     // TODO make this random.
-    return "apple";
+    return "APPLE";
 }
 
 // EventListener function for when a guess is submitted
