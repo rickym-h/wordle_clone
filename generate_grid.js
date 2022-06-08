@@ -2,24 +2,23 @@ let NUM_OF_GUESSES = 6;
 let LENGTH_OF_WORD = 5;
 let word = "UNDEFINED";
 
-function updateGuesses(array, word) {
+function updateGuesses(array, guessedWord) {
     let rowToEdit = document.getElementsByClassName("un-guessedRow");
     if (rowToEdit.length === 0) {
-        console.log("No more rows to update. returning...");
+        alert("The word was: " + word);
         return;
     }
     rowToEdit = rowToEdit[0];
 
-    console.log(rowToEdit);
     rowToEdit.classList.toggle("un-guessedRow");
     rowToEdit.classList.toggle("guessedRow");
 
     const children = rowToEdit.childNodes;
     console.assert(children.length === array.length);
-    for (let i = 0; i < word.length; i++) {
+    for (let i = 0; i < guessedWord.length; i++) {
         console.log(children[i]);
         let node = children[i];
-        node.textContent = word.charAt(i);
+        node.textContent = guessedWord.charAt(i);
 
         if (array[i] === 0) {
             continue;
@@ -34,7 +33,7 @@ function updateGuesses(array, word) {
         }
     }
     console.log(array);
-    console.log(word);
+    console.log(guessedWord);
 }
 // Takes a user input and a given word, and outputs the comparison array.
 function getOutputArray(input, word) {
@@ -76,8 +75,12 @@ function guessWord(event) {
     console.log("SUBMIT RECEIVED");
     let guessWord = textInput.value;
     console.log("guess word = ", guessWord, " real word = ", word);
+    const log = document.getElementById('info');
+    log.textContent = "";
     if (guessWord.length !== word.length) {
         // todo show length error then return
+        log.textContent = "Please enter a word of length " + LENGTH_OF_WORD;
+        return;
     }
 
     // todo guess word and update dom elements.
