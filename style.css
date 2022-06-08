@@ -35,6 +35,10 @@
     border-color: black;
     height: 50px;
     width: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .node2 {
     margin: 2px;
@@ -44,6 +48,10 @@
     border-color: black;
     height: 50px;
     width: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .node0 {
     margin: 2px;
@@ -53,5 +61,16 @@
     border-color: black;
     height: 50px;
     width: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+#un-guessedRow {
+
+}
+
+#guessedRow {
+
+}
