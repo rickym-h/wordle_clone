@@ -66,8 +66,110 @@ function getOutputArray(input, word) {
 
 // Get a random word which is n letters long.
 function getWordOfLengthN(n) {
-    // TODO make this random.
-    return "APPLE";
+    let arrayOfWords = ["which",
+        "there",
+        "their",
+        "about",
+        "would",
+        "these",
+        "other",
+        "words",
+        "could",
+        "write",
+        "first",
+        "water",
+        "after",
+        "where",
+        "right",
+        "think",
+        "three",
+        "years",
+        "place",
+        "sound",
+        "great",
+        "again",
+        "still",
+        "every",
+        "small",
+        "found",
+        "those",
+        "never",
+        "under",
+        "might",
+        "while",
+        "house",
+        "world",
+        "below",
+        "asked",
+        "going",
+        "large",
+        "until",
+        "along",
+        "shall",
+        "being",
+        "often",
+        "earth",
+        "began",
+        "since",
+        "study",
+        "night",
+        "light",
+        "above",
+        "paper",
+        "parts",
+        "young",
+        "story",
+        "point",
+        "times",
+        "heard",
+        "whole",
+        "white",
+        "given",
+        "means",
+        "music",
+        "miles",
+        "thing",
+        "today",
+        "later",
+        "using",
+        "money",
+        "lines",
+        "order",
+        "group",
+        "among",
+        "learn",
+        "known",
+        "space",
+        "table",
+        "early",
+        "trees",
+        "short",
+        "hands",
+        "state",
+        "black",
+        "shown",
+        "stood",
+        "front",
+        "voice",
+        "kinds",
+        "makes",
+        "comes",
+        "close",
+        "power",
+        "lived",
+        "vowel",
+        "taken",
+        "built",
+        "heart",
+        "ready",
+        "quite",
+        "class",
+        "bring",
+        "round"]
+    let selectedWord = arrayOfWords[Math.floor(Math.random()*arrayOfWords.length)].toUpperCase();
+
+    console.log(selectedWord);
+    return selectedWord;
 }
 
 // EventListener function for when a guess is submitted
@@ -78,12 +180,10 @@ function guessWord(event) {
     const log = document.getElementById('info');
     log.textContent = "";
     if (guessWord.length !== word.length) {
-        // todo show length error then return
         log.textContent = "Please enter a word of length " + LENGTH_OF_WORD;
         return;
     }
 
-    // todo guess word and update dom elements.
     let comparisonResult = getOutputArray(guessWord, word);
     updateGuesses(comparisonResult[0], comparisonResult[1]);
 
