@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <title>Ricky's Wordle</title>
     <link rel="stylesheet" href="style.css">
+    <script src="generate_grid.js" defer></script>
 </head>
 <body>
 
 <div class="parent">
     <div class="child">
         <header>Welcome to my Wordle Clone!</header>
+        <br><br><br>
+        <div id="container">
+            <form>
+                <label>Please input your guess: <input type="text" id="textInput"></label>
+                <button type="button" id="guessButton">Guess Word</button>
+            </form>
+
+        </div>
     </div>
 </div>
 
